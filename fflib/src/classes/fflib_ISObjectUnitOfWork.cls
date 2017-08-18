@@ -45,15 +45,6 @@ public interface fflib_ISObjectUnitOfWork
      */
     void registerRelationship(SObject record, Schema.sObjectField relatedToField, SObject relatedTo);
     /**
-     * Registers a relationship between a record and a Messaging.Email where the record has yet to be inserted
-     *  to the database.  This information will be
-     *  used during the commitWork phase to make the references only when related records have been inserted to the database.
-     *
-     * @param a single email message instance
-     * @param relatedTo A SOBject instance (yet to be commited to the database)
-     */
-    void registerRelationship( Messaging.SingleEmailMessage email, SObject relatedTo );
-    /**
      * Register an existing record to be updated during the commitWork method
      *
      * @param record An existing record
